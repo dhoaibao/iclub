@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/CLB_MT.png" type="image/x-icon">
+  <title>Câu lạc bộ Môi Trường - Đại học Cần Thơ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header  class="logo">
+      <img src="img/logo_name.png" alt="">
+  </header>
+  <main>
+    <div class="search-bar">
+      <input type="text" id="studentID" placeholder="Nhập mã số sinh viên của bạn..." onkeydown="handleKeyDown(event)">
+    </div>
+
+    <button id="searchButton" onclick="searchStudent()">
+      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+      Tìm kiếm
+    </button>
+
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-icon"></div>
+    </div>
+
+    <div id="studentInfo" style="display: none">
+      <div class="student-details">
+        <p id="studentName"></p>
+        <p id="studentMSSV"></p>
+        <p id="studentNganhKhoa"></p>
+      </div>
+      
+      <div class="student-activities">
+        <!-- Các hoạt động sinh viên đã tham gia sẽ được hiển thị ở đây -->
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <p>&copy; 2023 Duong Hoai Bao</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

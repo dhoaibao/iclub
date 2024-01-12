@@ -1,0 +1,225 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main {
+  flex: 1;
+}
+
+/* Header and Logo Styles */
+.logo {
+  font-size: 32px;
+  color: #2B9248;
+  text-align: center;
+}
+
+.logo img {
+  max-height: 200px;
+  width: auto;
+}
+
+/* Main Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 15px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  flex: 0 0 auto;
+  background-color: #2B9248;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Student Info Styles */
+#studentInfo {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student-details {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.student-activities {
+  margin-top: 10px;
+}
+
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  color: #000000;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* Hover Effect */
+button:hover {
+  background-color: #0e6426;
+}
+
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Loading Overlay Styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.loading-icon {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #2B9248;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* CSS styles for the hover effect */
+button.hover-effect {
+  background-color: #0e6426;
+}
+
+/* Table */
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  /* border: 2px solid #0e6426; */
+  border-radius: 10px; /* Add rounded corners to the table */
+}
+
+.activity-table th,
+.activity-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.activity-table th {
+  background-color: #f2f2f2;
+}
+
+/* Center the table */
+.activity-table {
+  margin: 0 auto;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* When the screen width is smaller than or equal to 768px */
+  .logo img {
+    height: 180px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* When the screen width is smaller than or equal to 480px */
+  .logo img {
+    height: 120px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  /* Adjust font size and padding for better display on small screens */
+  .search-bar input[type="text"],
+  .search-bar button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+  body {
+    font-size: 14px;
+  }
+}
